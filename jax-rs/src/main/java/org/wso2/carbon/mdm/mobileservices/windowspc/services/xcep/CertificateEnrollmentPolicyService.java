@@ -6,6 +6,7 @@ import org.wso2.carbon.mdm.mobileservices.windowspc.services.xcep.beans.*;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
+import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.BindingType;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
@@ -13,6 +14,7 @@ import javax.xml.ws.soap.SOAPBinding;
 
 @WebService(targetNamespace = "http://docs.oasis-open.org/ws-sx/ws-trust/200512", name = "IPolicy")
 @BindingType(value = SOAPBinding.SOAP12HTTP_BINDING)
+@XmlSeeAlso({ ObjectFactory.class })
 public interface CertificateEnrollmentPolicyService {
 
     @RequestWrapper(localName = "GetPolicies", targetNamespace = Constants.CertificateEnrollmentPolicy.ENROLLMENT_POLICY_TARGET_NAMESPACE, className = Constants.CertificateEnrollmentPolicy.REQUEST_WRAPPER_CLASS_NAME)
