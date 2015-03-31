@@ -63,7 +63,7 @@ public final class Constants {
         public static final String DEVICE_ENROLLMENT_SERVICE_TARGET_NAMESPACE =
                 "http://schemas.microsoft.com/windows/pki/2009/01/enrollment/RSTRC";
         public static final String CERTIFICATE_ENROLLMENT_SERVICE_ENDPOINT =
-                "org.wso2.carbon.mdm.mobileservices.windows.services.wstep" +
+                "org.wso2.carbon.mdm.mobileservices.windowspc.services.wstep" +
                         ".CertificateEnrollmentService";
         public static final String TOKEN_TYPE =
                 "http://schemas.microsoft.com/5.0.0" +

@@ -103,7 +103,6 @@ public class CertificateEnrollmentServiceImpl implements CertificateEnrollmentSe
 	                                 AdditionalContext additionalContext,
 	                                 Holder<RequestSecurityTokenResponse> response)
 									 throws WindowsDeviceEnrolmentException {
-
 		ServletContext ctx =
 				(ServletContext) context.getMessageContext().get(MessageContext.SERVLET_CONTEXT);
 
