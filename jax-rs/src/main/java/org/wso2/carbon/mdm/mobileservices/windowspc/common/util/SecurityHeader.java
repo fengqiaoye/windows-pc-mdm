@@ -26,7 +26,7 @@ import javax.xml.ws.handler.soap.SOAPMessageContext;
 import java.util.HashSet;
 import java.util.Set;
 
-public class securityheader implements SOAPHandler<SOAPMessageContext> {
+public class SecurityHeader implements SOAPHandler<SOAPMessageContext> {
 
     @Override
     public Set<QName> getHeaders() {

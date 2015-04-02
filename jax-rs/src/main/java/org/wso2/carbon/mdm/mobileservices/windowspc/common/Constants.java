@@ -21,7 +21,7 @@ public final class Constants {
         public static final String DISCOVERY_SERVICE_TARGET_NAMESPACE =
                 "http://schemas.microsoft.com/windows/management/2012/01/enrollment";
         public static final String AUTH_POLICY = "Federated";
-        public static final String AUTHENTICATION_SERVICE_URL = "https://enterpriseenrollment.wso2.com/ENROLLMENTSERVER/wab";
+        public static final String AUTHENTICATION_SERVICE_URL = "https://EnterpriseEnrollment.wso2.com/mdm/login-agent";
         public static final String CERTIFICATE_ENROLLMENT_POLICY_SERVICE_URL =
                 "https://EnterpriseEnrollment.wso2" +
                         ".com/ENROLLMENTSERVER/PolicyEnrollmentWebservice" +
@@ -100,6 +100,40 @@ public final class Constants {
         public static final String UTF_8 = "utf-8";
         public static final String CONTENT_LENGTH = "Content-Length";
 
+    }
+
+    /**
+     * SynclML service related constants
+     */
+    public final class SyncML {
+        public static final String SYNCML_RESPONSE = "device-info-response.xml";
+        //	public static final String SYNCML_SECOND_RESPONSE = "syncml-session-ending-response.xml";
+        public static final String SYNCML_PUSH_TEST_RESPONSE = "syncml-push-notification-init.xml";
+        public static final String SYNCML_PUSH_EXEC_RESPONSE = "syncml-session-ending-response.xml";
+        public static final String SYNCML_SECOND_RESPONSE = "syncml-second-response.xml";
+        public static final String SYNCML_PROCEED_RESPONSE = "syncml-session-proceed.xml";
+        public  static final String SYNCML_SESSION_STATUS_POLL_RESPONSE = "syncml-session-status-polling.xml";
+        public static final String SYNC_ML = "SyncML";
+        public static final String SYNCML_MSG_ID = "MsgID";
+        public static final String SYNCML_TARGET = "Target";
+        public static final String SYNCML_SOURCE = "Source";
+        public static final String SYNCML_CRED = "Cred";
+        public static final String SYNCML_RESULTS = "Results";
+        public static final String SYNCML_REPLACE = "Replace";
+
+        public static final String SYNCML_SOURCE_URI = "SOURCE_URI";
+        public static final String SYNCML_TARGET_URI = "TARGET_URI";
+        public static final String MSG_ID = "MSG_ID";
+        public static final String SYNCML_MESSAGE_ONE = "1";
+        public static final String SYNCML_MESSAGE_TWO = "2";
+    }
+
+    public final class PUSH{
+        public static final String CLIENT_SECRET = "nQGsIJNpqx1SilEP1MpiJ8Ze6/ZVc++e";
+        public static final String SID = "ms-app://s-1-15-2-4177135546-3837644170-3663331150-4203941256-211840037-832215718-46540115";
 
     }
+
+    public static  String channelURI = "https://sin.notify.windows.com/?token=AwYAAADjWA7UGWOrILXZjjSAR4jrRSM8rvr3jmqm57ZYsMPX%2blDwqT6Q%2fxLzULVgyJtG9m9mUo3%2b0qxrdlzGOFTn%2fM%2ftjqi%2b69nlBL2Ak2EC73h8UPjRiRYCgaJ26NSxiJjyNxg%3d\n";
+
 }

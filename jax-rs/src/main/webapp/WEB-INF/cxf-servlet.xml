@@ -18,6 +18,24 @@
         </jaxrs:serviceBeans>
     </jaxrs:server>
 
+    <jaxrs:server id="federated" address="/federated">
+        <jaxrs:serviceBeans>
+            <ref bean="fed_bean"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+
+    <jaxrs:server id="Syncmlinitial" address="/syncml">
+        <jaxrs:serviceBeans>
+            <ref bean="Syncml_initial_bean"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+
+    <jaxrs:server id="PushNotificationGenerator" address="/push">
+        <jaxrs:serviceBeans>
+            <ref bean="push_bean"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+
     <jaxws:endpoint
             id="DiscoveryService"
             implementor="org.wso2.carbon.mdm.mobileservices.windowspc.services.discovery.impl.DiscoveryServiceImpl"
@@ -34,7 +52,7 @@
 
         <jaxws:handlers>
             <bean id="securityheader"
-                  class="org.wso2.carbon.mdm.mobileservices.windowspc.common.util.securityheader"/>
+                  class="org.wso2.carbon.mdm.mobileservices.windowspc.common.util.SecurityHeader"/>
         </jaxws:handlers>
     </jaxws:endpoint>
 
@@ -54,5 +72,11 @@
 
     <bean id="customvalidator"
           class="org.wso2.carbon.mdm.mobileservices.windowspc.common.util.UsernameTokenValidator"/>
+    <bean id="fed_bean"
+          class="org.wso2.carbon.mdm.mobileservices.windowspc.services.sts.impl.SecurityTokenServiceImpl"/>
+    <bean id="Syncml_initial_bean"
+          class="org.wso2.carbon.mdm.mobileservices.windowspc.services.syncml.impl.SyncmlServiceImpl"/>
+    <bean id="push_bean"
+          class="org.wso2.carbon.mdm.mobileservices.windowspc.services.push.impl.PushNotificationServiceImpl"/>
 
 </beans>

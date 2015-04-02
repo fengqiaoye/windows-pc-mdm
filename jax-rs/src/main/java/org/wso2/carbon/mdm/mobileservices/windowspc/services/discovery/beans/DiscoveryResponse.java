@@ -1,5 +1,7 @@
 package org.wso2.carbon.mdm.mobileservices.windowspc.services.discovery.beans;
 
+import org.wso2.carbon.mdm.mobileservices.windowspc.common.Constants;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -10,16 +12,16 @@ import java.io.Serializable;
 @XmlType(name = "DiscoveryResponse")
 public class DiscoveryResponse implements Serializable{
 
-    @XmlElement(name = "AuthPolicy")
+    @XmlElement(name = "AuthPolicy", namespace = Constants.DISCOVERY_SERVICE_TARGET_NAMESPACE)
     private String authPolicy;
 
-    @XmlElement(name = "AuthenticationServiceUrl")
+    @XmlElement(name = "AuthenticationServiceUrl", namespace = Constants.DISCOVERY_SERVICE_TARGET_NAMESPACE)
     private String authenticationServiceUrl;
 
-    @XmlElement(name = "EnrollmentPolicyServiceUrl")
+    @XmlElement(name = "EnrollmentPolicyServiceUrl", namespace = Constants.DISCOVERY_SERVICE_TARGET_NAMESPACE)
     private String enrollmentPolicyServiceUrl;
 
-    @XmlElement(name = "EnrollmentServiceUrl")
+    @XmlElement(name = "EnrollmentServiceUrl", namespace = Constants.DISCOVERY_SERVICE_TARGET_NAMESPACE)
     private String enrollmentServiceUrl;
 
 
